@@ -1,26 +1,101 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Sand (background / surface) */
+  --color-sand-50: #faf6ee;
+  --color-sand-100: #f0e6d2;
+  --color-sand-200: #dccba7;
+  --color-sand-300: #c2a97a;
+
+  /* Sea (secondary / deep) */
+  --color-sea-300: #9fc8c8;
+  --color-sea-400: #7fb5b5;
+  --color-sea-600: #2a7a88;
+  --color-sea-700: #0e4a5c;
+  --color-sea-900: #06293a;
+
+  /* Sun (accent / CTA) */
+  --color-sun-300: #f4b886;
+  --color-sun-500: #e37a3c;
+  --color-sun-700: #b35520;
+
+  /* Ink (text) */
+  --color-ink-600: #5c6577;
+  --color-ink-900: #1a1f2e;
+
+  --background: var(--color-sand-50);
+  --foreground: var(--color-ink-900);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --color-sand-50: var(--color-sand-50);
+  --color-sand-100: var(--color-sand-100);
+  --color-sand-200: var(--color-sand-200);
+  --color-sand-300: var(--color-sand-300);
+  --color-sea-300: var(--color-sea-300);
+  --color-sea-400: var(--color-sea-400);
+  --color-sea-600: var(--color-sea-600);
+  --color-sea-700: var(--color-sea-700);
+  --color-sea-900: var(--color-sea-900);
+  --color-sun-300: var(--color-sun-300);
+  --color-sun-500: var(--color-sun-500);
+  --color-sun-700: var(--color-sun-700);
+  --color-ink-600: var(--color-ink-600);
+  --color-ink-900: var(--color-ink-900);
+
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-inter);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+html,
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.filter-daylight {
+  filter: brightness(1.15) contrast(0.95) saturate(1.1) sepia(0.08)
+    hue-rotate(-6deg);
+}
+
+@keyframes ombak-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  80% {
+    transform: scale(1.55);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.55);
+    opacity: 0;
+  }
+}
+
+.animate-ombak-pulse {
+  animation: ombak-pulse 2.2s ease-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-ombak-pulse {
+    animation: none;
+  }
 }
