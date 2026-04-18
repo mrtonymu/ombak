@@ -8,7 +8,7 @@ import { whatsappUrl } from "@/content/site";
 const POPUP_IMAGE =
   "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1600&q=80";
 
-const SESSION_KEY = "ombak_popup_shown";
+const SESSION_KEY = "exit_popup_seen";
 const MOBILE_IDLE_MS = 40_000;
 
 export function ExitPopup() {

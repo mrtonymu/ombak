@@ -121,8 +121,13 @@ export function Navbar() {
           aria-modal="true"
         >
           <div className="flex items-center justify-between px-5 py-4">
-            <span className="font-display text-lg font-semibold text-ink-900">
-              OMBAK<span className="text-sun-500">.</span>
+            <span className="flex flex-col leading-none text-ink-900">
+              <span className="font-sans text-[0.6rem] font-light uppercase tracking-[0.38em] text-ink-600">
+                BeachFront
+              </span>
+              <span className="mt-0.5 font-display text-lg font-semibold uppercase tracking-[0.22em]">
+                Balok<span className="text-sun-500">.</span>
+              </span>
             </span>
             <button
               type="button"

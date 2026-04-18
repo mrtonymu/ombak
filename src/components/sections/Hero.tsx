@@ -199,7 +199,7 @@ export function Hero() {
         {!muted && (
           <span
             aria-hidden
-            className="animate-ombak-pulse pointer-events-none absolute inset-0 rounded-full border border-sun-300/60"
+            className="animate-pulse-ring pointer-events-none absolute inset-0 rounded-full border border-sun-300/60"
           />
         )}
       </button>

@@ -32,7 +32,7 @@ export function LeadForm() {
     // Placeholder — replace with real endpoint (e.g. /api/leads or a service like Resend/Formspree)
     try {
       if (typeof window !== "undefined") {
-        console.warn("[ombak-v2] lead submitted (placeholder)", form);
+        console.warn("[lead-form] submitted (placeholder)", form);
       }
       await new Promise((r) => setTimeout(r, 700));
       setSubmitted(true);
