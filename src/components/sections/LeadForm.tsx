@@ -154,7 +154,7 @@ export function LeadForm() {
                       </option>
                       {UNITS.map((u) => (
                         <option key={u.id} value={u.code}>
-                          {u.code} · {u.name} · {u.fromPrice}
+                          {u.code} · {u.name} · {u.price}
                         </option>
                       ))}
                       <option value="all">Show me everything</option>
