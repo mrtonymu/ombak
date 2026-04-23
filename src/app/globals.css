@@ -70,9 +70,61 @@ body {
   }
 }
 
+.roi-glow {
+  background:
+    radial-gradient(ellipse 55% 45% at 80% 20%, rgba(228, 122, 60, 0.14) 0%, rgba(6, 41, 58, 0) 70%),
+    radial-gradient(ellipse 55% 45% at 15% 85%, rgba(127, 181, 181, 0.14) 0%, rgba(6, 41, 58, 0) 70%);
+}
+
+/* Features section — scroll-driven bg: sand-50 → sand-100 → sea-700 → sea-900 */
+@keyframes features-bg {
+  0%, 12% { background: var(--color-sand-50); }
+  38%      { background: var(--color-sand-100); }
+  68%      { background: var(--color-sea-700); }
+  100%     { background: var(--color-sea-900); }
+}
+
+.features-section {
+  /* Fallback for browsers without scroll-driven animations */
+  background: linear-gradient(
+    to bottom,
+    var(--color-sand-50)  0%,
+    var(--color-sand-100) 25%,
+    var(--color-sea-700)  65%,
+    var(--color-sea-900)  100%
+  );
+}
+
+@supports (animation-timeline: view()) {
+  .features-section {
+    background: var(--color-sand-50);
+    animation: features-bg linear both;
+    animation-timeline: view();
+    animation-range: entry 0% exit 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .features-section {
+    animation: none !important;
+    background: linear-gradient(
+      to bottom,
+      var(--color-sand-50)  0%,
+      var(--color-sand-100) 25%,
+      var(--color-sea-700)  65%,
+      var(--color-sea-900)  100%
+    ) !important;
+  }
+}
+
 .filter-daylight {
   filter: brightness(1.15) contrast(0.95) saturate(1.1) sepia(0.08)
     hue-rotate(-6deg);
+}
+
+@keyframes fadeup {
+  from { opacity: 0; transform: translateY(7px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes pulse-ring {

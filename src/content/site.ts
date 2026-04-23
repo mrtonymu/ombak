@@ -103,12 +103,12 @@ export const SITE = {
       { value: "100%", label: "Phase 1 & 2 on-time handover" },
     ],
     subsale: [
-      { size: "Compact studio", spa: "RM 320K", subsale: "RM 360K", gain: "+12.5%" },
-      { size: "Dual-key suite", spa: "RM 540K", subsale: "RM 640K", gain: "+18.5%" },
-      { size: "3-bed residence", spa: "RM 820K", subsale: "RM 1.05M", gain: "+28.4%" },
+      { size: "Studio suite (541 sf)", spa: "RM 354K", subsale: "RM 403K", gain: "+13.7%" },
+      { size: "Dual-key suite (680 sf)", spa: "RM 468K", subsale: "RM 543K", gain: "+16.1%" },
+      { size: "Sea-view residence (917 sf)", spa: "RM 609K", subsale: "RM 638K", gain: "+4.8%" },
     ],
     footnote:
-      "Figures reflect earlier-phase sub-sale performance. Past performance is not indicative of future returns.",
+      "Transacted subsale prices from the adjacent earlier-phase beachfront development by the same developer. Past performance is not indicative of future returns.",
   },
   urgency: {
     earlyBirdCopy:
@@ -118,14 +118,14 @@ export const SITE = {
   location: {
     eyebrow: "07 · Strategic location",
     title: "Your gateway to Balok Beach, newly within reach.",
-    lead: "Right on the beachfront in Beserah, Kuantan — close to town, port and the upcoming ECRL line. Two and a half hours from Kuala Lumpur by road. One rail ride when the line opens.",
+    lead: "Sitting directly on Balok Beach in Beserah — minutes from Kuantan town, the region's industrial port, and an ECRL station now 89% complete. Kuantan is the second most visited destination in Pahang, drawing 2.21 million visitors a year.",
     anchors: [
-      { value: "1 km", label: "To Swiss-Garden Beach Resort" },
-      { value: "11 km", label: "To Kuantan town" },
-      { value: "17 km", label: "To ECRL KotaSAS Station · 2026" },
-      { value: "17 km", label: "To new Kuantan International Airport" },
+      { value: "1 km", label: "Swiss-Garden Beach Resort" },
+      { value: "11 km", label: "Kuantan town centre" },
+      { value: "16 km", label: "Kuantan Port · MCKIP · Gebeng" },
+      { value: "17 km", label: "ECRL KotaSAS · 89% complete" },
       { value: "2.21 M", label: "Annual visitors to Kuantan" },
-      { value: "180°", label: "Unobstructed ocean view" },
+      { value: "30 km", label: "Cherating Beach" },
     ],
   },
   faq: {
@@ -188,7 +188,7 @@ export const UNITS: Unit[] = [
     beds: "1 Bed · 1 Bath",
     price: "RM 380K",
     priceNote: "SPA Price (from)",
-    roi: "6–9%",
+    roi: "7–10%",
     features: [
       "Garden View",
       "1 Car Park",
@@ -210,7 +210,7 @@ export const UNITS: Unit[] = [
     beds: "1 Bed · 1 Bath",
     price: "RM 420K",
     priceNote: "SPA Price (from)",
-    roi: "8–12%",
+    roi: "9–13%",
     features: [
       "Full Sea View",
       "1 Car Park",
@@ -311,51 +311,51 @@ export const ROI_TABLE: RoiRow[] = [
     id: "type-a",
     unit: "Type A · Garden Studio",
     price: "RM 380K",
-    nightly: "RM 260–300",
+    nightly: "RM 250",
     occupancy: "50–70%",
-    roi: "6–9%",
-    cashflow: "RM 1,480",
+    roi: "7–10%",
+    cashflow: "RM 1,392",
   },
   {
     id: "type-a1",
     unit: "Type A1 · Sea View Studio",
     price: "RM 420K",
-    nightly: "RM 320–380",
+    nightly: "RM 300",
     occupancy: "50–70%",
-    roi: "8–12%",
-    cashflow: "RM 2,140",
+    roi: "9–13%",
+    cashflow: "RM 1,828",
   },
   {
     id: "type-b",
     unit: "Type B · Dual-Key Suite",
     price: "RM 548K",
-    nightly: "RM 450–500",
+    nightly: "RM 450",
     occupancy: "50–70%",
     roi: "9–13%",
-    cashflow: "RM 3,493",
+    cashflow: "RM 2,883",
   },
   {
     id: "type-c",
     unit: "Type C · Dual-Key Residence",
     price: "RM 833K",
-    nightly: "RM 620–720",
+    nightly: "RM 550",
     occupancy: "50–70%",
     roi: "7–10%",
-    cashflow: "RM 3,960",
+    cashflow: "RM 3,003",
   },
   {
     id: "type-d",
     unit: "Type D · Jacuzzi Suite",
     price: "RM 910K",
-    nightly: "RM 700–820",
+    nightly: "RM 650",
     occupancy: "50–70%",
     roi: "8–12%",
-    cashflow: "RM 4,480",
+    cashflow: "RM 4,269",
   },
 ];
 
 export const ROI_FOOTNOTE =
-  "Estimates assume 50–70% occupancy and a 70/30 profit split with an accredited short-stay operator. Actual returns vary with market conditions.";
+  "Monthly cashflow shown at 70% occupancy based on a 70/30 profit split with an accredited short-stay operator, net of maintenance fee and a 35-year loan at 3.7% p.a. ROI range reflects 50–70% occupancy scenarios. Actual returns vary with market conditions.";
 
 export const MARQUEE_ITEMS = [
   "Freehold Land Title",
