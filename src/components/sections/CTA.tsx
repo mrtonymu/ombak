@@ -38,7 +38,7 @@ export function CTA() {
             as="p"
             className="mb-6 font-sans text-[0.7rem] font-medium uppercase tracking-[0.35em] text-sand-50/70"
           >
-            08 · Say hello
+            09 · Say hello
           </Reveal>
 
           <Reveal delay={0.1}>

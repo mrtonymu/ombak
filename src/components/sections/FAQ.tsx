@@ -7,6 +7,16 @@ import { Prose } from "@/components/text/Prose";
 import { SITE, whatsappUrl } from "@/content/site";
 import { cn } from "@/lib/cn";
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: SITE.faq.items.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: { "@type": "Answer", text: item.a },
+  })),
+};
+
 export function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
@@ -16,6 +26,10 @@ export function FAQ() {
       aria-label="Frequently asked questions"
       className="relative w-full bg-sand-100 py-24 sm:py-32 md:py-40"
     >
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <div className="mx-auto max-w-4xl px-6 md:px-10">
         <div className="text-center">
           <Reveal
