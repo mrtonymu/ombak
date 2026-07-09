@@ -28,7 +28,7 @@ export function Location() {
       aria-label="BeachFront Balok strategic location — Balok Beach, ECRL, growth catalysts"
       className="relative w-full overflow-hidden bg-sea-500"
     >
-      <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr]">
+      <div className="grid grid-cols-1">
 
         {/* ── Left: narrative + landmark grid ── */}
         <div className="relative z-10 flex flex-col justify-center bg-sea-500 px-8 py-20 md:px-12 md:py-28 lg:px-16">
@@ -85,15 +85,7 @@ export function Location() {
 
         </div>
 
-        {/* ── Right: map image ── */}
-        <div className="relative min-h-120 md:min-h-0">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/images/map.jpg"
-            alt="Map of BeachFront Balok location in Kuantan"
-            className="absolute inset-0 h-full w-full object-cover object-center"
-          />
-        </div>
+        {/* Map temporarily removed — pending replacement asset */}
 
       </div>
     </section>
